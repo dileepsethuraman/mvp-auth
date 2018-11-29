@@ -11,7 +11,7 @@ var conn_options = {
 
     native_parser: true,
     useNewUrlParser: true,
-    connectTimeoutMS: 7000, //Milliseconds
+    connectTimeoutMS: 2000, //Milliseconds
     reconnectTries: 5,
     reconnectTries: 3000,   // Milliseconds
     auto_reconnect : true
