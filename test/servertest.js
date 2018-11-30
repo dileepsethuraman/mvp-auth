@@ -50,3 +50,7 @@ describe('Test /GET request', function() {
             });
     });
 });
+
+after(async () => {
+    server.stop();
+});

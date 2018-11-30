@@ -56,8 +56,13 @@ redisClient.on("end", function() {
  
 });
 
-app.listen(3001, () => {
+let server = app.listen(3001, () => {
 	logger.info("Server running on port 3000");
 });
 
-module.exports = app;
+let stop = () => {
+    server.close();
+}
+
+module.exports = server;
+module.exports.stop = stop; 
