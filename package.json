@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha || true"
+    "test": "mocha -b || true"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.3"
   },

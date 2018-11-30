@@ -1,6 +1,6 @@
 // Include assertion libraries
 const assert = require('chai').assert;
-const chaiShould = require('chai').should;
+const chai = require('chai');
 const chaiHttp = require('chai-http');
 const server = require('../server'); // Pull the express server details from app
 
@@ -10,7 +10,7 @@ const {REDIS_HOST, REDIS_PORT, MONGO_URL} = require('../src/config');
 
 
 //Initialize middleware
-chaiShould.use(chaiHttp);
+chai.use(chaiHttp);
 
 // Assertion check to ensure environment variables are set
 describe('Check for environment variables', function () {
@@ -41,7 +41,7 @@ describe('Test /GET request', function() {
 
     it ('All addresses are retrieved on GET request to /address', function() {
 
-        chaiShould.request(server)
+        chai.request(server)
             .get('/address')
             .end((err,res) => {
                 res.should.have.status(200);
