@@ -6,11 +6,14 @@ pipeline {
                 timeout(time: 2, unit: 'MINUTES')
             }
             steps {
-
                 sh '''
                     docker rmi build:1
                     docker run --rm -p 27017:27017 --name mongodb -d  mongo
                 '''
+                sleep 5
+                nodejs(nodeJSInstallationName: 'jenkins-node') {
+                    sh 'node /home/srishti/devOps/mvp-auth/scripts/createEntries.js'
+                }
             }
         }
         stage ('Build') {

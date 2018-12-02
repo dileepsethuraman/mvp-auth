@@ -2,9 +2,9 @@ version: "3"
 services:
  buildtest:
   volumes:
-    - /home/srishti/devOps/mvp-auth:/home/mvp-auth
+   - /home/srishti/devOps/mvp-auth:/home/mvp-auth
   ports:
-    - "3000:3001"
-  # deploy:
-  # mode: replicated
-  # replicas: 2
+   - "3000:3001"
+  deploy:
+   mode: replicated
+   replicas: 2

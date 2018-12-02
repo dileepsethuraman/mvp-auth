@@ -3,7 +3,7 @@ services:
  buildtest:
   image: build:1
   links:
-    - mongodb
+   - mongodb
 
  mongodb:
   image: mongo
