@@ -26,7 +26,7 @@ function getAllAddress(req,res) {
 //GET request to retrieve a book given its ID
 function getAddressByID(req,res) {
 
-    address.findOne({ "name": "req.params.name" }, (err,response) => {
+    address.findOne({ "name": req.params.name }, (err,response) => {
 
         if(err) res.send(err);
 
