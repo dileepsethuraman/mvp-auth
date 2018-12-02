@@ -1,9 +1,8 @@
 version: "3"
 services:
+ mongodb:
+  image: mongo
  buildtest:
   image: build:1
   links:
    - mongodb
-
- mongodb:
-  image: mongo

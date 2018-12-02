@@ -1,10 +1,14 @@
 version: "3"
 services:
+ mongodb:
+  ports:
+   - "27017:27017"
  buildtest:
   volumes:
    - /home/srishti/devOps/mvp-auth:/home/mvp-auth
   ports:
    - "3000:3001"
+  command: ["npm","start"]
   deploy:
    mode: replicated
    replicas: 2
